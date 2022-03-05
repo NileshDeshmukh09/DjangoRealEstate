@@ -132,7 +132,7 @@ LOGGING = {
 }
 
 
-ALLOWED_HOSTS = ['https://realestateprojectdjango.herokuapp.com/', localhost , 127.0.0.1]
+ALLOWED_HOSTS = ['https://realestateprojectdjango.herokuapp.com/', 'localhost' , '127.0.0.1']
 
 
 # Application definition

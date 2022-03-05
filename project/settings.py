@@ -1,5 +1,6 @@
 import os
 from pathlib import Path
+import django_heroku
 from django.contrib.messages import constants as messages
 
 
@@ -15,7 +16,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'SECRET_KEY_PLACEHOLDER'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 DEFAULT_LOGGING_LEVEL = "DEBUG" if DEBUG else "INFO"
 
 LOGGING = {
@@ -131,7 +132,7 @@ LOGGING = {
 }
 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://realestateprojectdjango.herokuapp.com/', localhost , 127.0.0.1]
 
 
 # Application definition
@@ -311,3 +312,6 @@ try:
     from .production_settings import *
 except ImportError:
     pass
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())

@@ -1,1 +1,1 @@
-web: gunicorn Django-Real-Estate-master.wsgi --log-file -
+web: gunicorn project.wsgi --log-file -
